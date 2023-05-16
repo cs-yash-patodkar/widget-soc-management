@@ -40,8 +40,13 @@
     function initializeData() {
       if (configLoaded && svgLoaded) {
         $scope.dateFilterField = $scope.config.timeRange || 'createDate';
-        getResult();
+        // getResult();
+        populateByJson();
       }
+    }
+
+    function populateByJson(){
+      
     }
 
     function checkForSVGLoad() {
