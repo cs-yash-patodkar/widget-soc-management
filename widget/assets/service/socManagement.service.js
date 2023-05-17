@@ -13,7 +13,8 @@
             getPlaybookRun: getPlaybookRun,
             getPlaybookActionExecuted: getPlaybookActionExecuted,
             getStatusByPicklistName: getStatusByPicklistName,
-            getConfig: getConfig
+            getConfig: getConfig,
+            getCustomData: getCustomData
         };
         return service;
 
@@ -73,6 +74,10 @@
         
         function getConfig() {
             return $http.get('widgets/installed/socManagement-2.0.1/assets/socWidgetInput.json');
+        }
+
+        function getCustomData(){
+            return $http.get('widgets/installed/socManagement-2.0.1/assets/mockData.json');
         }
     }
 })();
